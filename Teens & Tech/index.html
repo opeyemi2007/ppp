@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="OtN8lv03Ucq6ROkZOs4bW3tQNelXyUCs57dXTBAL8V4" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teens & Tech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+</head>
+<body>
+    <header>
+        <img src="s6.png" alt="Your Logo" width='100px' height=80px'/>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li><a href="contactus.html">Enroll Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section class="slideshow">
+            <div class="slide" style="background-image: url('m.avif');"></div>
+            <div class="slide" style="background-image: url('s1.png');"></div>
+            <div class="slide" style="background-image: url('s2.png');"></div>
+            <div class="slide" style="background-image: url('s3.png');"></div>
+            <div class="slide" style="background-image: url('s4.png');"></div>
+             <div class="slide" style="background-image: url('s5.png');"></div>
+            <button class="prev-button">&#10094;</button>
+            <button class="next-button">&#10095;</button>
+        </section>
+        
+        <!-- ... Rest of the content ... -->
+    </main>
+    <main>
+        <section class="intro">
+            <h2>Teens & Tech </h2>
+            <p>Empowering teens to explore the world of technology.</p>
+        </section>
+        <section class="courses">
+        
+            <!-- Course cards will go here -->
+        </section>
+    </main>
+    
+            <div class="course-card">
+                <img src="graph.avif" alt="Coding Course">
+                <h3>Graphic Designs Essentials</h3>
+                <p>Learn the basics of Graphic Designs.</p>
+            </div>
+            <div class="course-card">
+                <img src="code.avif" alt="Web Design Course">
+            
+                <h3>Coding Fundamentals</h3>
+                <p>Learn basics of coding and programming.</p>
+            </div>
+            <!-- Add more course cards here -->
+        </section>
+    </main>
+
+    <div class="burger">
+        <div class="patty"></div>
+        <div class="patty"></div>
+        <div class="patty"></div>
+    </div>
+    
+    <footer>
+        <address>
+            <div class="email-icon">
+               <i class="fas fa-envelope"> teenstech9@gmail.com</i>
+            </div>
+      
+   </address> 
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+<script>
+ // slideshow.js
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide) => {
+            slide.style.display = "none";
+        });
+        slides[index].style.display = "block";
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    nextButton.addEventListener("click", nextSlide);
+    prevButton.addEventListener("click", prevSlide);
+
+    setInterval(nextSlide, 2000); // Change slide every 5 seconds
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', function () {
+        navbar.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+
+        // You can add other actions or animations here
+    });
+});
+
+
+</script>
